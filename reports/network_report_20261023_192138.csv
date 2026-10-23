@@ -1,2 +1,0 @@
-timestamp,check_type,target,status,response_time_ms,details,resolved_ip
-2026-10-23T19:21:38+00:00,TCP,example.com:443,PASS,37.32,TCP connection successful (timeout 3s).,172.66.147.243

@@ -1,2 +1,0 @@
-timestamp,check_type,target,status,response_time_ms,details,resolved_ip
-2026-10-23T19:22:13+00:00,PING,example.com,PASS,5055.28,rtt min/avg/max/mdev = 6.478/6.478/6.478/0.000 ms,
