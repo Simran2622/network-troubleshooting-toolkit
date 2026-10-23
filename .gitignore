@@ -1,1 +1,13 @@
-__pycache__/\n*.py[cod]\n.venv/\nvenv/\n.env\nreports/*.csv\n!reports/.gitkeep\n.DS_Store\n
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# Generated network diagnostic reports
+reports/*.csv
+
+# Local environment files
+.venv/
+venv/
+.env

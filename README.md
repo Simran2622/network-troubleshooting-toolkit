@@ -1,11 +1,12 @@
-# Network Troubleshooting Toolkit
+ Network Troubleshooting Toolkit
 
-A beginner-friendly terminal-based Python tool for basic network diagnostics: DNS lookup, one specified TCP port check, ping, response timing, and CSV reports.
+A beginner-friendly terminal-based Python tool for basic 
+network diagnostics: DNS lookup, one specified TCP port check, 
+ping, response timing, and CSV reports.
 
 ## Requirements
-- Python 3.10+ (Python 3.11 recommended)
-- Linux/Ubuntu/WSL2, macOS, or Windows
-- No third-party packages required
+- Python 3.10+ (Python 3.11 recommended) - Linux/Ubuntu/WSL2, 
+macOS, or Windows - No third-party packages required
 
 ## Run on Ubuntu / WSL2
 From the extracted project folder:
@@ -47,3 +48,25 @@ Python modules, exceptions, DNS resolution (`socket.getaddrinfo`), TCP connectio
 
 ## Limitations and responsible use
 A failed connection does not necessarily mean a server is down; a firewall, DNS issue, or network restriction may block it. Ping can be blocked even when TCP works. This is a basic diagnostic tool, not continuous monitoring or a full security scanner. Only test systems and ports you own or are authorized to troubleshoot.
+
+## Automated Tests
+
+Run the complete test suite on Ubuntu, Linux, or WSL2:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+The tests cover:
+- DNS resolution success and failure.
+- TCP connection success and failure.
+- Ping success, failure, and timeout handling.
+- Empty hostname and invalid port validation.
+- CSV report columns, timestamps, and saved diagnostic data.
+
+The tests use mocked network responses where appropriate, so they do not depend on external network availability.
+
+## Generated Files
+
+- CSV diagnostic reports are saved in `reports/`.
+- Generated reports and Python cache files are excluded from Git using `.gitignore`.
